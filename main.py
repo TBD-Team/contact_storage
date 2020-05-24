@@ -22,4 +22,5 @@ def send_image():
     return get_string_from_image(img)
 
 if __name__ == '__main__':
-    app.run(debug=DEBUG)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=DEBUG)
